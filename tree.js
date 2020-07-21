@@ -55,6 +55,7 @@ data = Object {
   name: "flare"
   children: Array(10) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
 }
+
 tree = ƒ(data)
 
 tree = data => {
@@ -63,3 +64,5 @@ tree = data => {
   root.dy = width / (root.height + 1);
   return d3.tree().nodeSize([root.dx, root.dy])(root);
 }
+
+d3.json("./flare-2.json", tree);
