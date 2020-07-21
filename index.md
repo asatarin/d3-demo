@@ -16,18 +16,16 @@ var height = 500;
 //Create SVG element
 var svg = d3.select("body")
     .append("svg")
-    .id("viz_area")
     .attr("width", width)
     .attr("height", height);
-    
-// Select the svg area
-var svg = d3.select("#viz_area")
 
 // Create a scale: transform value in pixel
 var x = d3.scaleLinear()
     .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
     .range([0, 400]);       // This is the corresponding value I want in Pixel
 // Try console.log( x(25) ) to see what this x function does.
+
+console.log(x(25));
 
 // Add 3 dots for 0, 50 and 100%
 svg.append("circle")
