@@ -10,6 +10,16 @@
 <script src="tree.js"></script>
 
 <script>
+var width = 500;
+var height = 500;
+
+//Create SVG element
+var svg = d3.select("body")
+    .append("svg")
+    .id("viz_area")
+    .attr("width", width)
+    .attr("height", height);
+    
 // Select the svg area
 var svg = d3.select("#viz_area")
 
