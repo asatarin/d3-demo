@@ -51,13 +51,6 @@ chart = {
   return svg.node();
 }
 
-data = Object {
-  name: "flare"
-  children: Array(10) [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
-}
-
-tree = ƒ(data)
-
 tree = data => {
   const root = d3.hierarchy(data);
   root.dx = 10;
